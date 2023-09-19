@@ -6,7 +6,7 @@ sidebar_position: 3
 
 ## How to Study the Course
 
-The course is developed as single application on top of Docusaurus. It is expected to be cloned from the [repository](https://git.epam.com/viktor_soroka/software-designs-and-algorithms) and studied on your local machine. Follow the steps in the project description to start studying the course. In case when you are not able to access the repository for any reason you can use the attached archive.
+The course is developed as single application on top of Docusaurus. It is expected to be cloned from the [repository](https://git.epam.com/ld-global-coordinators/js-programs/software-designs-and-algorithms-couserbook.git) and studied on your local machine. Follow the steps in the project description to start studying the course. In case when you are not able to access the repository for any reason you can use the attached archive.
 
 ## Communication Channels
 

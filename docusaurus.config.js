@@ -42,7 +42,7 @@ const config = {
         },
         items: [
           {
-            href: "https://git.epam.com/viktor_soroka/software-designs-and-algorithms",
+            href: "https://git.epam.com/ld-global-coordinators/js-programs/software-designs-and-algorithms-couserbook",
             label: "Gitlab",
             position: "right",
           },
