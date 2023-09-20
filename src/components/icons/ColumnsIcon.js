@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-export function Columns() {
+export const ColumnsIcon = () => {
   return (
     <svg
       width="40"
@@ -151,4 +151,4 @@ export function Columns() {
       </g>
     </svg>
   );
-}
+};

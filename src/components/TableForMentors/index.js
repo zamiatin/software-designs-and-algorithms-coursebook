@@ -1,1 +1,1 @@
-export * from "./TableForMentors";
+export * from './TableForMentors';

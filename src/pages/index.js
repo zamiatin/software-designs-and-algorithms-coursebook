@@ -1,14 +1,10 @@
-import React from "react";
-import Layout from "@theme/Layout";
-import styles from "./index.module.css";
+import React from 'react';
+import Layout from '@theme/Layout';
 
-import { Link } from "../components/Link/Link";
+import { PuzzleIcon, AlgorithmIcon, OOPIcon, FxIcon, ColumnsIcon } from '../components/icons';
+import { Link } from '../components';
 
-import { Puzzle } from "../components/icons/Puzzle";
-import { Algorithm } from "../components/icons/Algorithm";
-import { Fx } from "../components/icons/Fx";
-import { Oop } from "../components/icons/OOP";
-import { Columns } from "../components/icons/Columns";
+import styles from './index.module.css';
 
 export default function Home() {
   return (
@@ -19,31 +15,22 @@ export default function Home() {
             url="/docs/building-blocks-of-oop-part-1/programming_paradigm"
             title="Building Blocks of OOP, Part 1, Part 2"
           >
-            <Oop />
+            <OOPIcon />
           </Link>
-          <Link
-            url="/docs/functional-programming/fp_introduction"
-            title="Functional Programming"
-          >
-            <Fx />
+          <Link url="/docs/functional-programming/fp_introduction" title="Functional Programming">
+            <FxIcon />
           </Link>
-          <Link
-            url="/docs/design-patterns/design_patterns"
-            title="Design Patterns"
-          >
-            <Puzzle />
+          <Link url="/docs/design-patterns/design_patterns" title="Design Patterns">
+            <PuzzleIcon />
           </Link>
-          <Link
-            url="/docs/solid-principles/introduction"
-            title="SOLID Principles"
-          >
-            <Columns />
+          <Link url="/docs/solid-principles/introduction" title="SOLID Principles">
+            <ColumnsIcon />
           </Link>
           <Link
             url="/docs/algorithms-and-data-structures-part-1/elementary_data_structures"
             title="Algorithms and Data Structures, Part 1, Part 2"
           >
-            <Algorithm />
+            <AlgorithmIcon />
           </Link>
         </div>
       </main>

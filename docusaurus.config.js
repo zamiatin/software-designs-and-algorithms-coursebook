@@ -7,8 +7,8 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const config = {
   title: "Software Designs and Algorithms",
   url: "https://your-docusaurus-test-site.com",
-  baseUrl: "/",
-  onBrokenLinks: "throw",
+  baseUrl: "/designs-and-algorithms/",
+  onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
   organizationName: "epam", // Usually your GitHub org/user name.
@@ -42,7 +42,7 @@ const config = {
         },
         items: [
           {
-            href: "https://git.epam.com/ld-global-coordinators/js-programs/software-designs-and-algorithms-couserbook",
+            href: "https://git.epam.com/ld-global-coordinators/js-programs/software-designs-and-algorithms-coursebook",
             label: "Gitlab",
             position: "right",
           },

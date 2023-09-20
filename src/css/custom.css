@@ -26,11 +26,11 @@
   padding: 0 var(--ifm-pre-padding);
 }
 
-html[data-theme="dark"] .docusaurus-highlight-code-line {
+html[data-theme='dark'] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-html[data-theme="dark"] .formula {
+html[data-theme='dark'] .formula {
   filter: invert(100%);
 }
 

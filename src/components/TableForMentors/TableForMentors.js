@@ -1,16 +1,11 @@
-import React, { Fragment, useEffect, useState } from "react";
-import clsx from "clsx";
+import React, { Fragment, useEffect, useState } from 'react';
+import clsx from 'clsx';
 
-import { getCommonPoints, getPercentGrade } from "./helpers";
+import { getCommonPoints, getPercentGrade } from './helpers';
 
-import {
-  MAX_GRADE,
-  MESSAGE_TYPE,
-  MESSAGE_TYPE_TEXT,
-  SUCCESSFUL_GRADE,
-} from "./constants";
+import { MAX_GRADE, MESSAGE_TYPE, MESSAGE_TYPE_TEXT, SUCCESSFUL_GRADE } from './constants';
 
-import styles from "./TableForMentors.module.css";
+import styles from './TableForMentors.module.css';
 
 export function TableForMentors({ data }) {
   const [points, setPoints] = useState(0);
@@ -28,13 +23,13 @@ export function TableForMentors({ data }) {
   };
 
   const handleInputChange = (isChecked, point) => {
-    setPoints((prevState) => prevState + point * (isChecked ? 1 : -1));
+    setPoints(prevState => prevState + point * (isChecked ? 1 : -1));
   };
 
   const handleReset = () => {
     const inputs = document.querySelectorAll("input[type='checkbox']");
 
-    inputs.forEach((element) => (element.checked = false));
+    inputs.forEach(element => (element.checked = false));
 
     setPoints(0);
     setGrade(0);
@@ -80,14 +75,9 @@ export function TableForMentors({ data }) {
               className={styles.checkbox}
               id={`${index}${index1}`}
               type="checkbox"
-              onChange={(event) =>
-                handleInputChange(event.target.checked, point.points)
-              }
+              onChange={event => handleInputChange(event.target.checked, point.points)}
             />
-            <label
-              className={styles.checkboxLabel}
-              htmlFor={`${index}${index1}`}
-            />
+            <label className={styles.checkboxLabel} htmlFor={`${index}${index1}`} />
           </td>
         </tr>
       ))}
