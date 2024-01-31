@@ -1,15 +1,24 @@
 .main {
-  background-color: #282c34;
+  background-color: var(--ifm-navbar-link-color);
   background-image: url('/img/image.jpg');
   background-repeat: no-repeat;
+  background-position: center center;
   background-size: cover;
-  height: calc(100vh - 119px);
+  flex-grow: 1;
   padding: 3rem;
 }
 
 .linksContainer {
   display: inline-flex;
   flex-direction: column;
+
+  a {
+    color: var(--ifm-navbar-link-color);
+
+    [data-theme='dark'] & {
+      filter: invert(100%);
+    }
+  }
 }
 
 footer {

@@ -1,7 +1,10 @@
 // @ts-check
+// `@type` JSDoc annotations allow editor autocompletion and type checking
+// (when paired with `@ts-check`).
+// There are various equivalent ways to declare your Docusaurus config.
+// See: https://docusaurus.io/docs/api/docusaurus-config
 
-const lightCodeTheme = require("prism-react-renderer/themes/github");
-const darkCodeTheme = require("prism-react-renderer/themes/dracula");
+import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -10,13 +13,22 @@ const config = {
   baseUrl: "/designs-and-algorithms/",
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
+
+  // Even if you don't use internationalization, you can use this field to set
+  // useful metadata like html lang. For example, if your site is Chinese, you
+  // may want to replace "en" with "zh-Hans".
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en'],
+  },
+
   favicon: "img/favicon.ico",
-  organizationName: "epam", // Usually your GitHub org/user name.
-  projectName: "docusaurus", // Usually your repo name.
+  organizationName: "EPAM",
+  projectName: "docusaurus",
   plugins: [require.resolve("docusaurus-lunr-search")],
   presets: [
     [
-      "@docusaurus/preset-classic",
+      'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
@@ -41,6 +53,7 @@ const config = {
           src: "img/logo.svg",
         },
         items: [
+          { href: 'https://d17btkcdsmqrmh.cloudfront.net', label: 'Back to Interactive Learning', position: 'left' },
           {
             href: "https://git.epam.com/ld-global-coordinators/js-programs/software-designs-and-algorithms-coursebook",
             label: "Gitlab",
@@ -63,8 +76,8 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} Software Designs and Algorithms, Built with Docusaurus.`,
       },
       prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+        theme: prismThemes.github,
+        darkTheme: prismThemes.dracula,
       },
     }),
 };
