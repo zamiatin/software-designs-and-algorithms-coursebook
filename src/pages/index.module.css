@@ -11,14 +11,14 @@
 .linksContainer {
   display: inline-flex;
   flex-direction: column;
+}
 
-  a {
-    color: var(--ifm-navbar-link-color);
+.linksContainer a {
+  color: var(--ifm-navbar-link-color);
+}
 
-    [data-theme='dark'] & {
-      filter: invert(100%);
-    }
-  }
+[data-theme='dark'] .linksContainer a {
+  filter: invert(100%);
 }
 
 footer {

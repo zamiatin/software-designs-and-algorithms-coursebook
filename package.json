@@ -32,6 +32,12 @@
   "optionalDependencies": {
     "@ebook/access-epm-wrapper": "^0.0.4"
   },
+  "overrides": {
+    "@ebook/access-epm-wrapper": {
+      "react": "^18.0.0",
+      "react-dom": "^18.0.0"
+    }
+  },
   "browserslist": {
     "production": [
       ">0.5%",

@@ -35,6 +35,19 @@ const config = {
           sidebarPath: require.resolve("./sidebars.js"),
           editUrl: undefined,
           exclude: ["**/hometask/node_modules/**"],
+          lastVersion: 'current',
+          versions: {
+            current: {
+              label: 'Next',
+              path: '',
+              banner: 'none'
+            },
+            '1.0.0': {
+              label: '1.0.0',
+              path: '1.0.0',
+              banner: 'none'
+            },
+          },
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -66,9 +79,16 @@ const config = {
             position: "left",
           },
           {
-            to: "docs/Introduction/help",
+            type: "doc",
+            docId: "Introduction/help",
             label: "Help",
             position: "left",
+          },
+          {
+            type: 'docsVersionDropdown',
+            position: 'left',
+            dropdownItemsAfter: [],
+            dropdownActiveClassDisabled: true,
           },
         ],
       },
