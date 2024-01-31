@@ -60,7 +60,7 @@ So, in fact, neither diagrams, nor the relationships between them, nor drawings,
 
 Requirements, product, ecosystem, environment, customer ¬ all this will change. The system needs a design that is ready for such changes. Such design would consist of certain parts that would interact with each other to create the behavior of something whole: a class, a component, an architectural layer, or an application. As you understand parts are objects, interactions between them are implemented using messages that are sent between these objects. At the same time, sending the correct message to the correct recipient-object requires knowledge of where this object is and how to interact with it. This knowledge creates a relationship between two or three objects, or generally a huge number of objects in the system. Cross dependencies, cycle-dependency and so on arise. Accordingly, all these dependencies complicate system change. Object-oriented design is essentially dependency management. In the absence of design, unmanaged dependencies lead to chaos, because objects begin to know too much about each other, and at some point, it is easier to throw everything out and rewrite entire application than to add some next changes. Since these dependencies just become unmanageable. By changing something in one place, even if there are some tests, we do not exclude the possibility that something will not break in another place.
 
-## 6.4 The Purpose oF OOD
+## 6.4 The Purpose of OOD
 
 Software must:
 - Satisfy customer's needs
