@@ -1,26 +1,4 @@
 .main {
-  background-color: var(--ifm-navbar-link-color);
-  background-image: url('/img/image.jpg');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+  background: var(--ifm-navbar-link-color) url('/img/image.jpg') center/cover no-repeat;
   flex-grow: 1;
-  padding: 3rem;
-}
-
-.linksContainer {
-  display: inline-flex;
-  flex-direction: column;
-}
-
-.linksContainer a {
-  color: var(--ifm-navbar-link-color);
-}
-
-[data-theme='dark'] .linksContainer a {
-  filter: invert(100%);
-}
-
-footer {
-  padding: 10px;
 }

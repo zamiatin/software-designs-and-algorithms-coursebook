@@ -43,3 +43,7 @@ html[data-theme='dark'] .formula {
 .navbar__search {
   margin-left: 10px;
 }
+
+footer {
+  padding: 10px;
+}
