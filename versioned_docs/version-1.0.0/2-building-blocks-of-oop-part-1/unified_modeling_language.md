@@ -14,7 +14,16 @@ There is a language called UML or Unified Modeling Language for describing syste
 
 Figure 2.1 - UML diagram of Student class
 
-![img.png](img/uml_student_class.png)
+```mermaid
+classDiagram
+class Student {
+  -age: number;
+  -name: string;
+  +learn() void;
+  +getName() string;
+  +getAge() string;
+}
+```
 
 As you can see on the Figure 2.1, there is nothing complicated in the UML. Here is a diagram of the Student class, where at the top you see the name of the class, below is a list of properties that are inherent in this class, even below its behavior, that is, the methods that this class has.
 
@@ -24,14 +33,65 @@ Let us take a closer look at the relationship between the classes.
 
 Figure 2.2 – UML Relations
 
-![img.png](img/uml_relations.jpg)
+```mermaid
+classDiagram
+direction BT
+namespace Aggregation {
+  class Team
+  class Programmer1
+  class Programmer2
+  class Programmer3
+  class TeamLead
+}
+Team o-- Programmer1
+Team o-- Programmer2
+Team o-- Programmer3
+Team o-- TeamLead
+namespace Composition {
+  class Flat
+  class Room
+  class Toilet
+  class Kitchen
+}
+Flat *-- Room
+Flat *-- Toilet
+Flat *-- Kitchen
+```
+```mermaid
+classDiagram
+namespace Inheritance {
+  class Animal
+  class Dog
+}
+Animal <|-- Dog
+namespace Association {
+  class Class1
+  class Class2
+}
+Class1 <-- Class2
+namespace Dependency {
+  class Class3
+  class Class4
+}
+Class3 <.. Class4
+```
 
 ## 2.2 Association
 There are different types of relationship between two classes / objects. The most basic type of relationship is association, which means that the two classes are somehow related to each other, and we do not yet know exactly how this relationship is expressed and are going to clarify it in the future. This usually happens in the early stages of system design, when we know that there is a relationship, but what specific relationship - inheritance, composition, or something else is not yet clear to us. We are designing the system more globally. The association helps us a lot when we indicate that one class in some way interact with another class. At the initial stage, this is enough for us. Further, of course, this will be clarified. Why is this a directional association? – Because the arrow shows us that we have a component that uses another component. In this case the `CustomService` uses the `CustomRepository` component, and not vice versa.
 
 Figure 2.3 – Directed association
 
-![img.png](img/uml_directed_association.png)
+```mermaid
+classDiagram
+direction LR
+class CustomService {
+  +doSomeWork()
+}
+class CustomRepository {
+  +save()
+}
+CustomService --> CustomRepository : Uses
+```
 
 An association is a relationship in which objects of one type are somehow related to objects of another type. For example, an object of one type contains or somehow uses an object of another type. The player plays in a team. We do not yet know what kind of relationship they have, or we are not interested in it at this stage of the design. But we know that there is a relationship.
 
@@ -41,7 +101,16 @@ A more precise type of relationship is the public inheritance relationship (IS A
 
 Figure 2.4 – Inheritance relationship
 
-![img.png](img/uml_inheritance.png)
+```mermaid
+classDiagram
+class AbstractRepository {
+  +save()
+}
+class SQLRepository {
+  +save()
+}
+AbstractRepository <|-- SQLRepository
+```
 
 Although inheritance is a great tool in the hands of any OOP programmer, it is clearly not enough for solving all types of problems. Firstly, not all relationships between classes are defined by the "is a" relationship, and secondly, inheritance is the strongest relationship between two classes that cannot be broken at runtime (this relationship is static and, in strongly typed languages, is determined at compile time).
 
@@ -53,7 +122,28 @@ When relationships between components go beyond inheritance, relationships such 
 
 Figure 2.5 – Composition and Aggregation
 
-![img.png](img/uml_composition_and_aggregation.png)
+```mermaid
+classDiagram
+class CompositeCustomService {
+  +doSomeWork()
+}
+class CustomRepository {
+  +save()
+}
+
+CompositeCustomService *-- CustomRepository
+note for CompositeCustomService "Controls the lifetime of its component part"
+
+class AggregatedCustomService {
+  +doSomeWork()
+}
+class AbstractRepository {
+  +save()
+}
+
+AggregatedCustomService o-- AbstractRepository
+note for AggregatedCustomService "Receives a part from the outside"
+```
 
 A couple of points to make it easier to remember the visual notation:
 1. the diamond is always on the side of the whole, and the simple line is on the side of the component.
