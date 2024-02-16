@@ -65,11 +65,6 @@ const config = {
         },
         items: [
           {
-            href: 'https://d17btkcdsmqrmh.cloudfront.net',
-            label: 'Back to Interactive Learning',
-            position: 'left',
-          },
-          {
             href: 'https://git.epam.com/ld-global-coordinators/js-programs/software-designs-and-algorithms-coursebook',
             label: 'Gitlab',
             position: 'right',
@@ -78,24 +73,24 @@ const config = {
             type: 'doc',
             docId: 'contents',
             label: 'Start learning',
-            position: 'left',
+            position: 'right',
           },
           {
             type: 'doc',
             docId: 'Introduction/help',
             label: 'Help',
-            position: 'left',
+            position: 'right',
           },
           {
             type: 'docsVersionDropdown',
-            position: 'left',
+            position: 'right',
             dropdownItemsAfter: [],
             dropdownActiveClassDisabled: true,
           },
         ],
       },
       footer: {
-        copyright: `Copyright © ${new Date().getFullYear()} Software Designs and Algorithms, Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} EPAM Systems. All Rights Reserved.`,
       },
       prism: {
         theme: prismThemes.github,
@@ -104,6 +99,9 @@ const config = {
       mermaid: {
         theme: { light: 'neutral', dark: 'forest' },
       },
+      colorMode: {
+        disableSwitch: true
+      }
     }),
 };
 
