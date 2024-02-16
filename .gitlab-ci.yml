@@ -29,7 +29,7 @@ before_script:
 install_dependencies:
   stage: install
   script:
-    - npm install
+    - npm install --force
 
 build:
   stage: build
