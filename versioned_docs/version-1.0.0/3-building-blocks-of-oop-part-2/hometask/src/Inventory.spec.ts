@@ -40,10 +40,10 @@ describe("Inventory", () => {
 
       expect(compareSpy).toHaveBeenCalledWith(
         { id: 2, name: "ring2", value: 4, weight: 2 },
-        { id: 1, name: "ring1", value: 3, weight: 1 }
+        { id: 1, name: "ring1", value: 3, weight: 1 },
       );
 
-      expect(inventory.toString()).toEqual("ring1 - Value: 3.00, Weight: 1.00, ring2 - Value: 4.00, Weight: 2.00");
+      expect(inventory.toString()).toEqual("ring2 - Value: 4.00, Weight: 2.00, ring1 - Value: 3.00, Weight: 1.00");
     });
 
     it("should sort items by value", () => {

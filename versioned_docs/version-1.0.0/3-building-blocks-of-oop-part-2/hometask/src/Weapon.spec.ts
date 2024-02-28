@@ -53,7 +53,7 @@ describe("Weapon", () => {
 
       weapon.use();
 
-      const getEffectiveDurabilitySpy = jest.spyOn(weapon, "getEffectiveDurability").and.callThrough();
+      const getEffectiveDurabilitySpy = jest.spyOn(weapon, "getEffectiveDurability");
 
       expect(weapon.use()).toEqual("You can't use the bow, it is broken.");
       expect(getEffectiveDurabilitySpy).not.toHaveBeenCalled();
