@@ -2,24 +2,17 @@ import {Shape} from './Shape';
 import {Point} from './Point';
 
 export class Triangle extends Shape {
-    private v1: Point;
-    private v2: Point;
-    private v3: Point;
-
     constructor(v1: Point, v2: Point, v3: Point);
     constructor(v1: Point, v2: Point, v3: Point, color: string, filled: boolean);
 
     constructor(
-        v1: Point,
-        v2: Point,
-        v3: Point,
+        private v1: Point,
+        private v2: Point,
+        private v3: Point,
         color: string = "green",
         filled: boolean = true
     ) {
         super([v1, v2, v3], color, filled);
-        this.v1 = v1;
-        this.v2 = v2;
-        this.v3 = v3;
     }
 
     toString(): string {
@@ -35,10 +28,10 @@ export class Triangle extends Shape {
             return "equilateral triangle";
         }
 
-        if (side1 === side2 && side2 === side3 && side1 === side3) {
-            return "isosceles triangle";
+        if (side1 !== side2 && side2 !== side3 && side1 !== side3) {
+            return "scalene triangle";
         }
 
-        return "scalene triangle";
+        return "isosceles triangle";
     }
 }

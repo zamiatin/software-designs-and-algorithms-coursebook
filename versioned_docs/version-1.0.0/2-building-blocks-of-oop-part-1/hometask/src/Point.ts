@@ -1,13 +1,7 @@
 export class Point {
-    x: number;
-    y: number;
-
     constructor();
     constructor(x: number, y: number);
-    constructor(x: number = 0, y: number = 0) {
-        this.x = x;
-        this.y = y;
-    }
+    constructor(public x: number = 0, public  y: number = 0) {};
 
     toString(): string {
         return `(${this.x}, ${this.y})`;
