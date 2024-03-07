@@ -26,6 +26,6 @@ describe("Triangle", () => {
   });
 
   it("should tell if the triangle is scalene", () => {
-    expect(new Triangle(new Point(0, 0), new Point(7, 0), new Point(3, 8)).getType()).toBe("scalene triangle");
+    expect(new Triangle(new Point(0, 0), new Point(7, 0), new Point(3, 11)).getType()).toBe("scalene triangle");
   });
 });
