@@ -67,6 +67,6 @@ describe("Item", () => {
   });
 
   it("`toString()` should work as expected", () => {
-    expect(new ItemWithImplementation("ring", 1, 1).toString()).toEqual("ring - Value: 1.00, Weight: 1.00");
+    expect(new ItemWithImplementation("ring", 1, 1).toString()).toEqual("ring - Value: 1, Weight: 1.00");
   });
 });
