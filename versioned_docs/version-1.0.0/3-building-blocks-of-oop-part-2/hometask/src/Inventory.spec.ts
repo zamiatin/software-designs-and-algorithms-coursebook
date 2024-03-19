@@ -19,7 +19,7 @@ describe("Inventory", () => {
 
     inventory.addItem(item);
 
-    expect(inventory.toString()).toEqual("ring - Value: 2.00, Weight: 1.00");
+    expect(inventory.toString()).toEqual("ring - Value: 2, Weight: 1.00");
   });
 
   describe("sort()", () => {
@@ -43,7 +43,7 @@ describe("Inventory", () => {
         { id: 1, name: "ring1", value: 3, weight: 1 },
       );
 
-      expect(inventory.toString()).toEqual("ring2 - Value: 4.00, Weight: 2.00, ring1 - Value: 3.00, Weight: 1.00");
+      expect(inventory.toString()).toEqual("ring2 - Value: 4, Weight: 2.00, ring1 - Value: 3, Weight: 1.00");
     });
 
     it("should sort items by value", () => {
@@ -55,7 +55,7 @@ describe("Inventory", () => {
       inventory.addItem(item2);
       inventory.sort();
 
-      expect(inventory.toString()).toEqual("ring2 - Value: 3.00, Weight: 1.00, ring1 - Value: 4.00, Weight: 2.00");
+      expect(inventory.toString()).toEqual("ring2 - Value: 3, Weight: 1.00, ring1 - Value: 4, Weight: 2.00");
     });
   });
 });
