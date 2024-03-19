@@ -11,7 +11,7 @@ export class Sword extends Weapon {
         if (this.damageModifier < Sword.MAX_DAMAGE_MODIFIER) {
             this.damageModifier += Sword.MODIFIER_CHANGE_RATE;
             if (this.damageModifier > Sword.MAX_DAMAGE_MODIFIER) {
-                this.damageModifier = Sword.MAX_DAMAGE_MODIFIER;
+                this.damageModifier = Math.min(this.damageModifier, Sword.MAX_DAMAGE_MODIFIER)
             }
         }
     }

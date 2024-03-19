@@ -5,9 +5,9 @@ export class Bow extends Weapon {
     }
 
     polish() {
-        const effectiveDurability = this.getEffectiveDurability(Weapon.MODIFIER_CHANGE_RATE);
+        const effectiveDurability = this.getEffectiveDurability();
 
-        if(effectiveDurability <= 1) {
+        if (effectiveDurability < 1) {
             this.durabilityModifier += Weapon.MODIFIER_CHANGE_RATE;
         }
     }

@@ -9,7 +9,7 @@ export abstract class Weapon extends Item {
         super(name, value, weight);
     }
 
-    polish(): void {}
+    abstract polish(): void;
     getEffectiveDamage(): number {
         return this.baseDamage + this.damageModifier;
     }

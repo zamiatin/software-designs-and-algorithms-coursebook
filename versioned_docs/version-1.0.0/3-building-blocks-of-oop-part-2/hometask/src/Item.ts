@@ -1,11 +1,10 @@
 import {Comparable} from './Comparable';
 
-let itemId = 0;
 export abstract class Item implements Comparable<Item> {
    static idCounter: number = 0;
    readonly id: number = 0;
   constructor(readonly name: string, public value: number, public weight: number) {
-      this.id = ++itemId;
+      this.id = ++Item.idCounter;
   };
 
   compareTo(other: Item): number {
@@ -19,14 +18,14 @@ export abstract class Item implements Comparable<Item> {
   }
 
   static resetIdCounter(): void {
-      itemId = 0;
+      Item.idCounter = 0;
   }
 
   toString(): string {
     return `${this.name} - Value: ${this.value}, Weight: ${this.weight.toFixed(2)}`;
   }
 
-  use() : void {}
+  abstract use() : void;
   getId(): number {
       return this.id;
   }

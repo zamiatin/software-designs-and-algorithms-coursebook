@@ -18,12 +18,7 @@ export class Inventory implements ItemComparator {
     }
 
     sort(comparator?: ItemComparator) {
-        if (comparator) {
-            this.items.sort((a, b) => comparator.compare(a, b));
-        }
-        else {
-            this.items.sort((a, b) => a.compareTo(b));
-        }
+        this.items.sort((a, b) => comparator ? comparator.compare(a, b) : a.compareTo(b));
     }
 
     toString(): string { return this.items.join(', ');}
